@@ -58,4 +58,9 @@ public class EmployeeServiceImpl implements EmployeeService {
         }
         return deletedEmployee;
     }
+
+    @Override
+    public Employee updateEmployeeById(Employee employee) {
+        return employeeRepository.updateEmployeeById(employee);
+    }
 }

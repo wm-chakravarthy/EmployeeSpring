@@ -12,4 +12,6 @@ public interface EmployeeRepository {
     public List<Employee> getAllEmployees();
 
     public Employee deleteEmployeeById(int empId);
+
+    public Employee updateEmployeeById(Employee employee);
 }
