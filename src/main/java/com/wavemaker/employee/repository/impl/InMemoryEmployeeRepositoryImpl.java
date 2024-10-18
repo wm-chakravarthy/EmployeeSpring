@@ -3,12 +3,14 @@ package com.wavemaker.employee.repository.impl;
 import com.wavemaker.employee.exception.EmployeeNotFoundException;
 import com.wavemaker.employee.pojo.Employee;
 import com.wavemaker.employee.repository.EmployeeRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+@Repository
 public class InMemoryEmployeeRepositoryImpl implements EmployeeRepository {
 
     private static final Map<Integer, Employee> employeeMap = new ConcurrentHashMap<>();

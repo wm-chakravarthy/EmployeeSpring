@@ -5,19 +5,25 @@ import com.wavemaker.employee.repository.EmployeeRepository;
 import com.wavemaker.employee.service.EmployeeService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class EmployeeServiceImpl implements EmployeeService {
 
     private static final Logger logger = LoggerFactory.getLogger(EmployeeServiceImpl.class);
-    private final EmployeeRepository employeeRepository;
 
-    public EmployeeServiceImpl(EmployeeRepository employeeRepository) {
-        logger.info("Creating the EmployeeRepository Bean");
-        this.employeeRepository = employeeRepository;
-        logger.info("Bean EmployeeRepository injected");
-    }
+    @Autowired
+    private  EmployeeRepository employeeRepository;
+
+
+//    public EmployeeServiceImpl(EmployeeRepository employeeRepository) {
+//        logger.info("Creating the EmployeeRepository Bean");
+//        this.employeeRepository = employeeRepository;
+//        logger.info("Bean EmployeeRepository injected");
+//    }
 
     @Override
     public Employee addEmployee(Employee employee) {

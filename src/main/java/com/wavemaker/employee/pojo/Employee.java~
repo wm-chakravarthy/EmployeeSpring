@@ -9,7 +9,11 @@ public class Employee {
     private int age;
     private String gender;
 
-    public Employee() {
+    public Employee(int empId, String name, int age, String gender) {
+        this.empId = empId;
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
     }
 
     public int getEmpId() {
